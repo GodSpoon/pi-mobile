@@ -7,9 +7,11 @@
         </trust-anchors>
     </base-config>
 
-    <!-- Allow cleartext only for local debugging and Tailnet MagicDNS hosts. -->
+    <!-- Allow cleartext only for local debugging, Tailnet MagicDNS, and Netbird hosts. -->
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">localhost</domain>
         <domain includeSubdomains="true">ts.net</domain>
+        <domain includeSubdomains="true">nb.rip</domain>
+        <domain>192.168.4.3</domain>
     </domain-config>
 </network-security-config>

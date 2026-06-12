@@ -2,7 +2,7 @@
 <network-security-config>
     <!--
       Debug builds no longer allow global cleartext.
-      Use Tailscale MagicDNS hostnames (*.ts.net) or localhost endpoints only.
+      Use Tailscale MagicDNS hostnames (*.ts.net), Netbird (*.nb.rip), or localhost endpoints only.
     -->
     <base-config cleartextTrafficPermitted="false">
         <trust-anchors>
@@ -13,5 +13,7 @@
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">localhost</domain>
         <domain includeSubdomains="true">ts.net</domain>
+        <domain includeSubdomains="true">nb.rip</domain>
+        <domain>192.168.4.3</domain>
     </domain-config>
 </network-security-config>
